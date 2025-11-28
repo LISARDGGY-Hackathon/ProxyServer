@@ -23,9 +23,9 @@ while(True):
         print("Invalid model number. Please enter 1 or 2.\n")
         continue
 
-    cmd = input("input: ")
+    msg = input("input: ")
 
-    client.send(f"{model} {cmd}".encode())
+    client.send(f"{model} {msg}".encode())
 
     while(True):
         data = client.recv(BUFFER_SIZE)
