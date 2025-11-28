@@ -6,6 +6,7 @@ This is a program that can use a computer as a proxy server to transfer data for
 #### Server (proxy_server.py):
 - Add code to forward the requests to the selected model server and get the response back. (line 50~ in proxy_server.py)
 - Replace the placeholder with the LLM's response and send it back to the client. (line 59 in proxy_server.py)
+- Setup port forwarding.
 - Sharing your public IP with your partner.
 - Run the program.
 
