@@ -34,7 +34,11 @@ while(True):
 
         data = data.decode()
         print(data)
-
     print()
+    
+    '''
+    Use the data received from the LLM as needed.
+    '''
+
 client.send(b"END")
 print("Connection closed.")
