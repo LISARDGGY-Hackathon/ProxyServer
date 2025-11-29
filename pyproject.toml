@@ -1,0 +1,7 @@
+[project]
+name = "proxyserver"
+version = "0.1.0"
+description = "Proxy server for AMD AI Agent Hackathon"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
