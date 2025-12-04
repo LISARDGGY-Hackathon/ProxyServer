@@ -42,7 +42,7 @@ def _filter_response_headers(headers):
 @app.api_route("/{path:path}", methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "HEAD"])
 async def forward(path: str, request: Request):
     # Build target URL by appending the incoming path and preserving query params
-    upstream = UPSTREAM_URL.rstrip("/") + "/" + path.lstrip("/")
+    upstream = UPSTREAM_URL1.rstrip("/") + "/" + path.lstrip("/")
     params = dict(request.query_params)
 
     req_headers = _filter_request_headers(dict(request.headers))

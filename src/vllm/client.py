@@ -10,7 +10,7 @@ upstream endpoint and prints the response.
 
 VLLM_1 = "http://210.61.209.139:45014/v1/"
 VLLM_2 = "http://210.61.209.139:45005/v1/"
-
+proxy_host = "http://100.68.65.78:8887"
 
 def build_body(prompt: str):
     # Minimal chat-style body compatible with many vLLM endpoints
@@ -21,12 +21,6 @@ def main():
     print("vLLM direct client")
 
     while True:
-        model = input("Select model (1 or 2) or 'exit': ")
-        if model == "exit":
-            break
-        if model not in ("1", "2"):
-            print("Invalid model number. Please enter 1 or 2.\n")
-            continue
 
         path = input("Path (default: chat/completions): ").strip()
         if not path:
@@ -36,10 +30,7 @@ def main():
 
         body = build_body(prompt)
 
-        if model == "1":
-            base = VLLM_1
-        else:
-            base = VLLM_2
+        base = proxy_host
 
         url = base.rstrip("/") + "/" + path.lstrip("/")
 
