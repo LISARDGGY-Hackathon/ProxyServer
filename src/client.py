@@ -7,8 +7,8 @@ It sends a JSON body with `model` and `input` and prints the JSON response.
 Run: `python src/client.py` and follow prompts.
 """
 
-PROXY_HOST = "127.0.0.1"  # change to proxy host if needed
-PROXY_PORT = 5678
+PROXY_HOST = "100.68.65.78"  # change to proxy host if needed
+PROXY_PORT = 8888
 
 BASE_URL = f"http://{PROXY_HOST}:{PROXY_PORT}"
 
